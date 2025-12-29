@@ -1,0 +1,114 @@
+:root {
+  --bg-color: #050505;
+  --card-bg: #0a0a0a;
+  --neon-purple: #bb29eb;
+  --neon-cyan: #00f0ff;
+  --neon-green: #39ff14;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+
+  --hud-border: 1px solid rgba(0, 240, 255, 0.3);
+  --hud-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+  /* Futuristic Font Stack */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-purple);
+  border-radius: 4px;
+}
+
+/* HUD Card Style */
+.hud-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--neon-purple);
+  box-shadow: 0 0 15px rgba(187, 41, 235, 0.1);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Corner Accents */
+.hud-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--neon-cyan);
+  border-left: 2px solid var(--neon-cyan);
+}
+
+.hud-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid var(--neon-cyan);
+  border-right: 2px solid var(--neon-cyan);
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--neon-cyan);
+  margin-top: 0;
+}
+
+button {
+  background: transparent;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+button:hover {
+  background: var(--neon-green);
+  color: black;
+  box-shadow: 0 0 20px var(--neon-green);
+}
+
+input,
+select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
